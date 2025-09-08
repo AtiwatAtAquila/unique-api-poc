@@ -258,17 +258,20 @@ export const reservationRoutes = new Elysia({
           id: prevReservation.id,
           requesterId: prevReservation.requesterId,
           lineUserId: body.lineUserId ?? prevReservation.lineUserId,
-          projectName: body.projectName ?? prevReservation.projectName,
+          projectName: body.projectName,
           purpose: body.purpose ?? prevReservation.purpose,
           passengerAmount:
             body.passengerAmount ?? prevReservation.passengerAmount,
           notes: body.notes ?? prevReservation.notes,
+          notesFromOfficer:
+            body.notesFromOfficer ?? prevReservation.notesFromOfficer,
           startDate: body.startDate ?? prevReservation.startDate,
           endDate: body.endDate ?? prevReservation.endDate,
           passenger: body.passenger ?? prevReservation.passenger,
           approve: body.approve ?? prevReservation.approve,
           pdfUrl: body.pdfUrl ?? prevReservation.pdfUrl,
           car: body.car ?? prevReservation.car,
+          numberPlate: body.numberPlate ?? prevReservation.numberPlate,
 
           isSelfDrive: body.isSelfDrive ?? prevReservation.isSelfDrive,
           driverName: body.driverName ?? prevReservation.driverName,
